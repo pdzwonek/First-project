@@ -4,49 +4,69 @@
         <meta charset="utf-8">
         <title>Sit on Chair</title>
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     </head>
     <body>
 
         <header>
             <div class="main-width">
-                <p>sit on chair</p>
-                <ul class="main-menu">
-                    <li>o firmie</li> <!--jak sie robi menu rozwijane?-->
-                    <li>galeria</li>
-                    <li>kontakt</li>
-                </ul>
+                <div class="content">
+                    <p>sit <strong>on</strong> chair</p>
+                    <nav>
+                        <ul class="main-menu">
+                            <li>o firmie</li> <!--jak sie robi menu rozwijane?-->
+                            <li>galeria</li>
+                            <li>kontakt</li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
 
-        <section><!--przypisz gradient!-->
+        <div class="clear"></div>
+
+        <section id="slider">
 
             <div class="main-width">
-                <!--<div></div> tu strzałka w lewo-->
-                <img src="">
-                <h1>sit on our chair</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus nisl eget orci condimentum eleifend. Quisque sodales condimentum sagittis. Sed interdum tristique lacus ac porttitor. Vivamus sit amet diam pulvinar, vehicula libero nec, ornare metus. Maecenas vestibulum, ex vitae cursus porta, elit nibh ornare nunc, ut ultrices nunc justo non orci. Fusce euismod augue neque, vel pellentesque purus vehicula vitae. Maecenas sagittis gravida ullamcorper.
-                </p>
-                <div class="button">
-                    <p>zobacz więcej</p>
-                </div>
-                <!--<div></div> tu strzałka w prawo-->
+
+                    <div class="arrow" id="left"><</div>
+
+                    <div id="black-chair"></div>
+
+                    <div class="text">
+                        <h1>sit <strong>on</strong> our <strong>chair</strong></h1>
+                        <p>
+                            Lorem ipsum dolor, consectetur adipiscing elit. Vivamus nisl <br>eget orci condimentum eleifend. Quisque sodales condimentum <br>sagittis. Sed interdum tristique lacus ac porttitor. Sit amet diam pulvinar, vehicula libero nec, ornare metus.
+                        </p>
+                        <div class="button">
+                            <p>zobacz więcej</p>
+                        </div>
+                    </div>
+
+                    <div class="arrow" id="right">></div>
+
             </div>
 
         </section>
 
-        <section class="content">
+        <div class="clear"></div>
+
+        <section id="galery">
 
             <div class="main-width">
-                <div>
-                    <p class="title">Chair CLAIR</p>
-                    <!--<div class="small-line"></div> zamiast tego to atr ::after   POMYSŁ! w divie napisac znak mniejszości i ostylowac font-->
+                <div class="picture box">
+                    <div>
+                        <p class="title">Chair CLAIR</p>
+                    </div>
+                    <!--<div class="small-line"></div> zamiast tego to atr ::after -->
                 </div>
-                <div>
-                    <p class="title">Chair MARGARITA</p>
+                <div class="picture box">
+                    <div>
+                        <p class="title">Chair MARGARITA</p>
+                    </div>
                     <!--<div class="small-line"></div> zamiast tego to atr ::after-->
                 </div>
-                <div>
+                <div class="txt box">
                     <p class="title">Finds all inputs</p>
                     <!--<div class="small-line"></div> zamiast tego to atr ::after-->
                     <p>
@@ -60,7 +80,9 @@
 
         </section>
 
-        <section class="content">
+        <div class="clear"></div>
+
+        <section>
 
             <div class="main-width">
                 <p>cennik</p>
@@ -69,7 +91,7 @@
 
         </section>
 
-        <section class="content">
+        <section>
 
             <div class="main-width">
                 <p>kontakt</p>
