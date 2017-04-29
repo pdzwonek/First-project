@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Sit on Chair</title>
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     </head>
     <body>
 
@@ -14,7 +14,16 @@
                     <p>sit <strong>on</strong> chair</p>
                     <nav>
                         <ul class="main-menu">
-                            <li>o firmie</li> <!--jak sie robi menu rozwijane?-->
+                            <li>o firmie
+                                <div id="menu" class="hide-menu">
+                                    <ul id="simple-arrow"></ul>
+                                    <ul class="sub-menu">
+                                        <li>Aktualności</li>
+                                        <li>Nasz team</li>
+                                        <li>Historia</li>
+                                    </ul>
+                                </div>
+                            </li>
                             <li>galeria</li>
                             <li>kontakt</li>
                         </ul>
@@ -30,17 +39,26 @@
             <div class="main-width">
 
                     <div class="arrow" id="left"><</div>
-
-                    <div id="black-chair"></div>
+                    <div class="images">
+                        <ul>
+                            <li>
+                                <img src="images/1.png"/>
+                            </li>
+                            <li>
+                                <img src="images/2.png"/>
+                            </li>
+                            <li>
+                                <img src="images/3.png"/>
+                            </li>
+                        </ul>
+                    </div>
 
                     <div class="text">
                         <h1>sit <strong>on</strong> our <strong>chair</strong></h1>
                         <p>
-                            Lorem ipsum dolor, consectetur adipiscing elit. Vivamus nisl <br>eget orci condimentum eleifend. Quisque sodales condimentum <br>sagittis. Sed interdum tristique lacus ac porttitor. Sit amet diam pulvinar, vehicula libero nec, ornare metus.
+                            Lorem ipsum dolor, consectetur adipiscing elit. Vivamus nisl eget orci condimentum eleifend. Quisque sodales condimentum sagittis. Sed interdum tristique lacus ac porttitor. Sit amet diam pulvinar, vehicula libero nec, ornare metus.
                         </p>
-                        <div class="button">
-                            <p>zobacz więcej</p>
-                        </div>
+                        <input type="button" value="Zobacz więcej">
                     </div>
 
                     <div class="arrow" id="right">></div>
@@ -54,21 +72,21 @@
         <section id="galery">
 
             <div class="main-width">
-                <div class="picture box">
-                    <div>
+                <div class="picture box" id="first-picture">
+                    <div class="opacity-box">
                         <p class="title">Chair CLAIR</p>
+                        <div class="small-line"></div>
                     </div>
-                    <!--<div class="small-line"></div> zamiast tego to atr ::after -->
                 </div>
-                <div class="picture box">
-                    <div>
+                <div class="picture box" id="second-picture">
+                    <div class="opacity-box">
                         <p class="title">Chair MARGARITA</p>
+                        <div class="small-line"></div>
                     </div>
-                    <!--<div class="small-line"></div> zamiast tego to atr ::after-->
                 </div>
                 <div class="txt box">
                     <p class="title">Finds all inputs</p>
-                    <!--<div class="small-line"></div> zamiast tego to atr ::after-->
+                    <div class="small-line"></div>
                     <p>
                         Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.
                     </p>
@@ -82,45 +100,119 @@
 
         <div class="clear"></div>
 
-        <section>
+        <section id="price">
 
-            <div class="main-width">
-                <p>cennik</p>
-                <!--<div class="big-line"></div> zamiast tego to atr ::after-->
+            <div class="main-width" id="price-elements">
+                <div class="title-box">
+                    <p id="big-title">cennik</p>
+                    <div class="big-line"></div>
+                </div>
+                <div class="price-list" id="first">
+                    <div class="circle"></div>
+                    <p>basic plan</p>
+                    <div class="subscription">
+                        <p>85<sup>99</sup><br><span>pln/msc<span></p>
+                    </div>
+                    <div class="include">
+                        <div>
+                            <p>Zakup towaru + dowóz</p>
+                        </div>
+                        <div>
+                            <p>Serwis</p>
+                        </div>
+                    </div>
+                    <input type="button" value="Dołącz">
+                </div>
+                <div class="price-list" id="different">
+                    <div class="circle"></div>
+                    <p>standard plan</p>
+                    <div class="subscription">
+                        <p>95<sup>99</sup><br><span>pln/msc<span></p>
+                    </div>
+                    <div class="include">
+                        <div>
+                            <p>Zakup towaru + dowóz</p>
+                        </div>
+                        <div>
+                            <p>Serwis</p>
+                        </div>
+                        <div>
+                            <p>Gwarancja 5 lat</p>
+                        </div>
+                    </div>
+                    <input type="button" value="Dołącz">
+                </div>
+                <div class="price-list" id="last">
+                    <div class="circle"></div>
+                    <p>advance plan</p>
+                    <div class="subscription">
+                        <p>211<sup>00</sup><br><span>pln/msc<span></p>
+                    </div>
+                    <div class="include">
+                        <div>
+                            <p>Zakup towaru + dowóz</p>
+                        </div>
+                        <div>
+                            <p>Serwis</p>
+                        </div>
+                        <div>
+                            <p>Gwarancja 6 lat</p>
+                        </div>
+                        <div>
+                            <p>Porady projektanta</p>
+                        </div>
+                    </div>
+                    <input type="button" value="Dołącz">
+                </div>
             </div>
 
         </section>
 
-        <section>
+        <div class="clear"></div>
+
+        <section id="form">
 
             <div class="main-width">
-                <p>kontakt</p>
-                <!--<div class="big-line"></div> zamiast tego to atr ::after-->
+                <div class="title-box">
+                    <p id="big-title">kontakt</p>
+                    <div class="big-line"></div>
+                </div>
                 <form>
-                    <input type="text" name="name" placeholder="Imię"/><br/>
-                    <input type="email" name="email" placeholder="Email"/><br/>
-                    <textarea name="message" placeholder="Wiadomość"></textarea>
-                    <!--checkbox dodac i ma byc checked-->
-                    <button name="submit">WYŚLIJ</button>
+                    <div class="left-form">
+                        <input type="text" name="name" placeholder="Imię"/><br/>
+                        <input type="email" name="email" placeholder="email"/><br/>
+                        <textarea name="message" placeholder="Wiadomość"></textarea>
+                    </div>
+                    <div class="right-form">
+                        <div class="choice-chair"></div>
+                        <div class="checkbox">
+                            <input type="checkbox" value="" id="agree" name="check" checked>
+                            <label for="agree"><span></span></label>
+                            <p>Zgadzam sie na przetwarzanie<br> danych osobowych</p>
+                        </div>
+                        <input type="submit" value="Wyślij">
+                    </div>
                 </form>
-                <input type="radio" name="permission" value="1" checked>
             </div>
 
         </section>
 
         <footer>
             <div class="main-width">
-                <p>
+                <p id="footer-text">
                     Copyright 2014 | All Rights Reserved - Sit On Chair
                 </p>
-                <img>
-                <img>
-                <img>
-                <img>
-                <p>
+                <div class="icon">
+                    <img src="images/flickr.png">
+                    <img src="images/vimeo.png">
+                    <img src="images/pinterest.png">
+                    <img src="images/twitter.png">
+                </div>
+                <p id="footer-logo">
                     sit <strong>on</strong> chair
                 </p>
             </div>
         </footer>
     </body>
+    <script src="js/app.js"></script>
 </html>

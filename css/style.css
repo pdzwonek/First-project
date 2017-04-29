@@ -1,35 +1,13 @@
-/* sprawdźić więcej formatów!
-@font-face {
-    font-family: 'ralewayregular';
-    src: url('raleway-regular.woff2') format('woff2'),
-         url('raleway-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ralewaylight';
-    src: url('raleway-light.woff2') format('woff2'),
-         url('raleway-light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'ralewaythin';
-    src: url('raleway-thin.woff2') format('woff2'),
-         url('raleway-thin.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.main-width {
+    width: 1300px;
+    margin: 0 auto;
 }
 
 header {
@@ -37,48 +15,91 @@ header {
     background-color: black;
     height: 47px;
     color: white;
-}
-
-.main-width {
-    width: 1300px;
-    margin: 0 auto;
-    border: 1px solid red;
+    font-weight: 500;
 }
 
 .content {
     height: 47px;
-    font-size: 14px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .content p {
     float: left;
-    text-transform: uppercase;
     margin-top: 16px;
     margin-bottom: 16px;
-    letter-spacing: 1px;
+    font-size: 14px;
 }
 
 strong {
     color: #24baa0;
+    font-weight: bold;
 }
 
 .main-menu {
     display: inline-block;
-    margin-left: 63.5%;
-    margin-top: 16px;
-    letter-spacing: 1px;
+    float: right;
     font-weight: bold;
+    margin-top: 16px;
 }
 
 .main-menu li {
     display: inline-block;
-    text-transform: uppercase;
-    font-weight: bold;
     margin: 0 28px;
+    position: relative;
+    cursor: pointer;
 }
 
 .main-menu li:last-child {
     margin-right: 0;
+}
+
+.hide-menu {
+    display: none;
+}
+
+.visible-menu {
+    display: block;
+    position: absolute;
+    text-transform: none;
+}
+
+.visible-menu #simple-arrow {
+    position: absolute;
+    display: block;
+    left: 25px;
+    top: 10px;
+    height: 0;
+    width: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid black;
+}
+
+.visible-menu .sub-menu {
+    position: absolute;
+    background-color: black;
+    top: 25px;
+    left: -25px;
+    list-style: none;
+}
+
+.visible-menu .sub-menu li {
+    margin: 0;
+    padding: 8px 16px;
+    width: 100%;
+}
+.visible-menu .sub-menu li:hover{
+    color: #24baa0;
+}
+
+.visible-menu .sub-menu li:first-child {
+    padding-top: 16px;
+}
+
+.visible-menu .sub-menu li:last-child {
+    padding-bottom: 16px;
 }
 
 .clear {
@@ -88,9 +109,8 @@ strong {
 /*slider*/
 
 #slider{
-    height: 500px;
+    height: 520px;
     width: 100%;
-    /*shadow mozna tylko ustawic*/
     background: rgba(250,250,250,1);
     background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(208,207,215,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,250,250,1)), color-stop(100%, rgba(208,207,215,1)));
@@ -101,29 +121,26 @@ strong {
 }
 
 .arrow {
-    font-size: 80px;
+    font-size: 90px;
     color: #24baa0;
+    margin-top: 180px;
 }
 
 #left {
     float: left;
-    margin-top: 200px;
-    margin-right: 20px;
+    cursor: pointer;
 }
 
 #right {
     float: right;
-    margin-top: 200px;
+    cursor: pointer;
 }
 
-#black-chair {
-    width: 480px;
-    height: 450px;
-    margin-top: 45px;
-    background-image: url(../images/black_chair.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
+.images li {
+    display: none;
+    width: 400px;
+    height: 400px;
+    margin: 80px 45px 50px 90px;
     float: left;
 }
 
@@ -131,13 +148,13 @@ strong {
     width: 40%;
     height: 500px;
     display: inline-block;
-    margin-left: 60px;
+    margin: 20px 90px 0 45px;
 }
 
 .text h1 {
     text-transform: uppercase;
     font-size: 40px;
-    font-weight: 200;
+    font-weight: 500;
     word-spacing: 3px;
     margin-bottom: 40px;
     margin-top: 120px;
@@ -145,27 +162,25 @@ strong {
 }
 
 .text > p {
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     margin-bottom: 30px;
     line-height: 22px;
     letter-spacing: 1px;
 }
 
-.button {
-    background-color: #24baa0;
-    width: 250px;
-    height: 50px;
-    font-size: 24px;
-    border-radius: 7px;
-    margin-left: 130px;
+.text input[type=button] {
+  border-radius: 7px;
+  background: #24baa0;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 15px 40px;
+  margin-left: 120px;
 }
 
-.button p {
-    color: white;
-    padding: 13px 26px;
-    text-transform: uppercase;
-}
 /*galery*/
 
 #galery {
@@ -181,13 +196,336 @@ strong {
 
 .picture {
     float: left;
-    border: 1px solid red;
     margin-right: 45px;
     background-color: gray;
 }
 
+#first-picture {
+    background: url(../images/box1_img.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+#second-picture {
+    background: url(../images/box2_img.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.opacity-box {
+    background-color: rgba(255,255,255,.5);
+    margin-top: 200px;
+    height: 80px;
+}
+
 .txt {
-    border: 1px solid red;
-    font-size: 14px;
     float: right;
+    height: 330px;
+    font-size: 18px;
+    border: 2px solid #d6d5d5;
+}
+
+.title {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.small-line {
+    width: 175px;
+    height: 7px;
+    background-color: #24baa0;
+    margin-left: 20px;
+    margin-top: 4px;
+}
+
+.txt :nth-child(1n+2) {
+    color: #575757;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 22px;
+    line-height: 22px;
+}
+
+/*price list*/
+
+#price {
+    height: 850px;
+    background-color: #f1f1f1;
+}
+
+
+#big-title {
+    padding-top: 50px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+    color: #575757;
+}
+
+.big-line {
+    width: 350px;
+    height: 7px;
+    background-color: #24baa0;
+    padding-top: 4px;
+}
+
+.price-list {
+    background-color: #f9f9f9;
+    border: 3px solid #d6d5d5;
+    width: 31%;
+    height: 600px;
+    display: inline-block;
+    margin: 100px 45px 45px 0;
+}
+
+#first {
+    float: left;
+}
+
+#last {
+    float: right;
+    margin-right: 0;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 15px solid white;
+    box-shadow: 0 0 0 3px #d1d1d1;
+    background-color: #c2c2c2;
+    margin: -40px auto;
+
+}
+
+.price-list > p {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-top: 20px;
+    color: #24baa0;
+    font-weight: 500;
+    margin: 55px auto 0 auto;
+    text-align: center;
+}
+
+.subscription {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #d6d5d5;
+    color: #c2c2c2;
+    background: #fff;
+    font-weight: 600;
+    margin: 40px auto 40px auto;
+}
+
+.subscription p {
+    margin: 35px;
+    font-size: 45px;
+    line-height: 30px;
+}
+
+sup {
+    font-size: 20px;
+}
+
+span {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+
+
+.include div {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    background-color: #e4e4e4;
+    color: #9a9a9a;
+    padding: 10px 70px;
+    text-align: center;
+}
+
+.include div:first-child {
+    margin-top: 20px;
+}
+
+.include div:nth-child(2n+2) {
+    background: #f1f1f1;
+    color: #7a7a7a;
+}
+
+.price-list input[type=button] {
+    margin: 50px 130px;
+    background: #24baa0;
+    border-radius: 7px;
+    border: none;
+    font-size: 18px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+
+#different {
+  background: #24baa0;
+  border: 3px solid #24baa0;
+}
+
+#different .circle {
+  border: 15px solid #24baa0;
+  box-shadow: 0 0 0 3px #24baa0;
+  background: #fff;
+}
+
+#different > p {
+  color: #fff;
+}
+
+#different .subscription {
+  border: 3px solid #24baa0;
+}
+
+#different .subscription p {
+  color: #24baa0;
+}
+
+#different .include div {
+  background: #fff;
+  color: #9a9a9a;
+}
+
+#different .include div:nth-child(2n+2) {
+  background: #f1f1f1;
+  color: #9a9a9a;
+}
+
+#different input[type=button] {
+  background: #fff;
+  color: #24baa0;
+  margin-top: 100px;
+}
+
+#first input[type=button] {
+  margin-top: 150px;
+}
+
+
+/*form*/
+
+#form {
+    height: 650px;
+}
+
+.left-form{
+    float: left;
+    width: 60%;
+    margin-top: 50px;
+}
+
+.left-form input, .left-form textarea {
+    width: 100%;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 15px 10px;
+    border: 1px solid #24baa0;
+    border-radius: 1px;
+    margin: 10px 0;
+}
+
+.left-form textarea {
+    padding-bottom: 150px;
+    resize: none;
+}
+
+.right-form{
+    float: right;
+    margin-top: 30px;
+    width: 35%;
+}
+
+.right-form .choice-chair {
+    height: 250px;
+    margin-bottom: 32px;
+    margin-left: 30px;
+    background-image: url(../images/red_chair.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.right-form .checkbox {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.right-form .checkbox label {
+    border: 1px solid #24baa0;
+    border-radius: 1px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.right-form .checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.right-form .checkbox input[type="checkbox"] + label span {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.right-form .checkbox input[type="checkbox"]:checked + label span {
+    background: url(../images/form_ok.jpg) center center no-repeat;
+    background-size: contain;
+}
+
+.right-form .checkbox p {
+    font-size: 24px;
+    padding: 2px 0 2px 20px;
+    color: #b3b3b3;
+    line-height: 22px;
+}
+
+.right-form input[type=submit] {
+    width: 100%;
+    border-radius: 8px;
+    background: #24baa0;
+    border: none;
+    color: white;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 40px;
+    margin-top: 32px;
+}
+
+/*footer*/
+
+footer {
+    width: 100%;
+    margin-bottom: 50px;
+    color: #9a9a9a;
+    font-size: 18px;
+    font-weight: 500;
+    word-spacing: 3px;
+}
+
+#footer-logo {
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+#footer-text {
+    float: left;
+    padding-top: 10px;
+}
+
+.icon {
+    display: inline-block;
+    margin-left: 400px;
 }
