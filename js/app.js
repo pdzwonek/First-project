@@ -14,15 +14,14 @@ menu.addEventListener("mouseout", function(){
     var hide = subMenu.classList.remove("visible-menu");
 });
 
-////////// slayder //////////
+////////// slider //////////
+
 var leftArrow = document.getElementById("left");
 var rightArrow = document.getElementById("right");
 
 var img = document.querySelectorAll(".images li");
-console.log(img); //array
 
 var indexImg = 0;
-console.log(img[indexImg]);
 
 img[indexImg].style.display = "block";
 
@@ -30,8 +29,7 @@ rightArrow.addEventListener("click", function(){
     img[indexImg].style.display = "none";
 
     if (indexImg === img.length - 1) {
-        indexImg--; //stoped slayder
-        //indexImg = -1; //loop with images
+        indexImg = -1;
     }
     indexImg++;
     img[indexImg].style.display = "block";
@@ -40,15 +38,26 @@ rightArrow.addEventListener("click", function(){
 
 leftArrow.addEventListener("click", function(){
     img[indexImg].style.display = "none";
-    //indexImg--; //loop with images
+
     if (indexImg === 0) {
-        indexImg++;
-        //indexImg = img.length - 1; //loop with images
+        indexImg = img.length;
     }
     indexImg--;
     img[indexImg].style.display = "block";
 
 });
+
+function autoSlide() {
+    img[indexImg].style.display = "none";
+
+    if (indexImg === img.length - 1) {
+        indexImg = -1;
+    }
+    indexImg++;
+    img[indexImg].style.display = "block";
+}
+
+setInterval(autoSlide, 4000);
 
 ////////// galery //////////
 
