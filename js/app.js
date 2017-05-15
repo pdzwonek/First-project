@@ -10,7 +10,7 @@ listElement.addEventListener("mouseover", function(){
     var visible = subMenu.classList.add("visible-menu");
 });
 
-menu.addEventListener("mouseout", function(){
+subMenu.addEventListener("mouseout", function(){
     var hide = subMenu.classList.remove("visible-menu");
 });
 
