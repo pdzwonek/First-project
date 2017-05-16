@@ -108,34 +108,43 @@ var panelLeftPattern = document.querySelector(".panel_left .pattern");
 var panelLeftTransport = document.querySelector(".panel_left .transport");
 
 var transport = document.querySelector("#transport");
-
 var textTransport = document.querySelector(".checkbox p");
 
-//Adding elements to right panel
+var panelRightTitle = document.querySelector(".panel_right .title");
+var panelRightColor = document.querySelector(".panel_right .color");
+var panelRightPattern = document.querySelector(".panel_right .pattern");
+var panelRightTransport = document.querySelector(".panel_right .transport");
+
+//Adding elements to left summary panel and elements price to right summary panel
 
 for (var i=0; i<firstPanel.length; i++){
     firstPanel[i].addEventListener("click", function(){
         panelLeftTitle.innerHTML = this.innerHTML;
+        panelRightTitle.innerHTML = this.dataset.price;
     })
 }
 
 for (var i=0; i<secondPanel.length; i++){
     secondPanel[i].addEventListener("click", function(){
         panelLeftColor.innerHTML = this.innerHTML;
+        panelRightColor.innerHTML = this.dataset.price;
     })
 }
 
 for (var i=0; i<thirdPanel.length; i++){
     thirdPanel[i].addEventListener("click", function(){
         panelLeftPattern.innerHTML = this.innerHTML;
+        panelRightPattern.innerHTML = this.dataset.price;
     })
 }
 
 transport.addEventListener("click", function(){
     if (transport.checked == true){
         panelLeftTransport.innerHTML = textTransport.innerHTML;
+        panelRightTransport.innerHTML = transport.dataset.price;
     } else {
         panelLeftTransport.innerHTML = "";
+        panelRightTransport.innerHTML = "";
     }
 })
 
