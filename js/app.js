@@ -165,7 +165,7 @@ transport.addEventListener("click", function(){
         panelLeftTransport.innerHTML = "";
         panelRightTransport.innerHTML = "";
     }
-})
+});
 
 
 })
