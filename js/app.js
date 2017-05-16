@@ -85,16 +85,59 @@ secondPictureBox.addEventListener("mouseout", function(){
 
 ////////// application //////////
 
+//drop-down-list --left-side
 var listArrow = document.querySelectorAll(".list_arrow");
 console.log(listArrow);
 
 for(var i=0; i<listArrow.length; i++){
-    console.log([i]);
 
     listArrow[i].addEventListener("click", function(){
         this.nextElementSibling.classList.toggle("list_panel");
     });
 }
+
+//finding elements in DOM
+
+var firstPanel = document.getElementById("first_panel").children;
+var secondPanel = document.getElementById("second_panel").children;
+var thirdPanel = document.getElementById("third_panel").children;
+
+var panelLeftTitle = document.querySelector(".panel_left .title");
+var panelLeftColor = document.querySelector(".panel_left .color");
+var panelLeftPattern = document.querySelector(".panel_left .pattern");
+var panelLeftTransport = document.querySelector(".panel_left .transport");
+
+var transport = document.querySelector("#transport");
+
+var textTransport = document.querySelector(".checkbox p");
+
+//Adding elements to right panel
+
+for (var i=0; i<firstPanel.length; i++){
+    firstPanel[i].addEventListener("click", function(){
+        panelLeftTitle.innerHTML = this.innerHTML;
+    })
+}
+
+for (var i=0; i<secondPanel.length; i++){
+    secondPanel[i].addEventListener("click", function(){
+        panelLeftColor.innerHTML = this.innerHTML;
+    })
+}
+
+for (var i=0; i<thirdPanel.length; i++){
+    thirdPanel[i].addEventListener("click", function(){
+        panelLeftPattern.innerHTML = this.innerHTML;
+    })
+}
+
+transport.addEventListener("click", function(){
+    if (transport.checked == true){
+        panelLeftTransport.innerHTML = textTransport.innerHTML;
+    } else {
+        panelLeftTransport.innerHTML = "";
+    }
+})
 
 
 })
