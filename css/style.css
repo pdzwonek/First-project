@@ -456,6 +456,10 @@ sup {
     cursor: pointer;
 }
 
+.unvisible_panel {
+    display: none;
+}
+
 .list_panel {
     background-color: white;
     border: 1px solid #ccc;
@@ -468,7 +472,7 @@ sup {
     z-index: 2;
     position: absolute;
     top: 54px;
-    display: none;
+    display: block;
 }
 
 .list_panel li {

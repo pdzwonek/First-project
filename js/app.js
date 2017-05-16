@@ -83,4 +83,18 @@ secondPictureBox.addEventListener("mouseout", function(){
     secondOpacityBox.style.display = "block";
 });
 
+////////// application //////////
+
+var listArrow = document.querySelectorAll(".list_arrow");
+console.log(listArrow);
+
+for(var i=0; i<listArrow.length; i++){
+    console.log([i]);
+
+    listArrow[i].addEventListener("click", function(){
+        this.nextElementSibling.classList.toggle("list_panel");
+    });
+}
+
+
 })
